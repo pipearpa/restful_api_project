@@ -17,6 +17,9 @@ app.use(bodyParser.json()) // Para recibir json
 app.use(morgan('combined'))
 
 app.use('/api/v1/users',require('./api/v1/routes/users.routes'))
+app.get('/api/v1/test',(req, res) => {
+    res.send('Hello ADSO !!!')
+})
 
 app.listen(app.get('port'),()=>{
     console.log(`Server running on localhost:${app.get('port')}`);
