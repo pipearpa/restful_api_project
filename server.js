@@ -2,6 +2,7 @@ const express = require('express') // Para incluir el Framework
 const app = express(); // Instancia del framework Express
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
+const {pg} = require('pg')
 
 // Validamos que no estemos en ambiente de producción
 if(process.env.NODE_ENV != 'production'){
@@ -20,6 +21,15 @@ app.use('/api/v1/users',require('./api/v1/routes/users.routes'))
 
 app.get('/api/v1/test',(req, res) => {
     res.send('Hello ADSO !!!')
+})
+const pool =  new pg.Pool({
+    connectionString : "postgres://jusapi:C2wCp4kxMDXRS8gBpqD7d90W21kzXdma@dpg-cjrlhcojbais73e38640-a.oregon-postgres.render.com/db_api_rest_yxp2"
+    //ssl:true
+
+})
+app.get('/api/v1/testdb',async(req, res) => {
+    const result = await pool.query('SELECT NOW()')
+    return res.json(result.rows[0])
 })
 
 app.listen(app.get('port'),()=>{
