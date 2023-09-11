@@ -2,14 +2,14 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('ArticleCategories', {
-      id: {
+    await queryInterface.createTable('ArticleCategories', { //Nombre de la base de datos
+      id: { //Atributo id 
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      articleId: {
+      articleId: { //Atributo articleId
         type: Sequelize.INTEGER,
         references: {
           model: {
@@ -18,7 +18,7 @@ module.exports = {
           }
         }
       },
-      categoryId: {
+      categoryId: { //Atributo categoryId
         type: Sequelize.INTEGER,
         references:{
           model:{

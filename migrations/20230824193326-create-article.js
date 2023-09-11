@@ -2,20 +2,20 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Articles', {
-      id: {
+    await queryInterface.createTable('Articles', { //Nombre de la base de datos
+      id: { //Atributo id
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      title: {
+      title: { //Atributo title
         type: Sequelize.STRING
       },
-      content: {
+      content: { //Atributo content
         type: Sequelize.TEXT
       },
-      UserId: {
+      UserId: { //Atributo UserId "Llave foranea"
         type: Sequelize.INTEGER
       },
       createdAt: {
