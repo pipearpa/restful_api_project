@@ -10,7 +10,7 @@ if(process.env.NODE_ENV != 'production'){
     require('dotenv').config()
 }
 
-app.set('port', process.env.PORT || 4000)
+app.set('port', process.env.PORT || 4000) //
 
 // Middlewares
 app.use(bodyParser.urlencoded({extended:false}))// Recibir datos formulario sencillos
