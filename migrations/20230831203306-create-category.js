@@ -2,14 +2,14 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Categories', {
-      id: {
+    await queryInterface.createTable('Categories', { //Nombre de la base de datos
+      id: { //Atributo id
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      name: { //Atributo name
         type: Sequelize.STRING
       },
       createdAt: {
