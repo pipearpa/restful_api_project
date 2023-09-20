@@ -13,9 +13,9 @@
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "development2": {
+  "production": {
     "username": "jusapi",
-    "password": "C2wCp4kxMDXRS8gBpqD7d90W21kzXdma",
+    "password": "sC2wCp4kxMDXRS8gBpqD7d90W21kzXdmac",
     "database": "db_api_rest_yxp2",
     "host": "oregon-postgres.render.com",
     "dialect": "postgres",
@@ -25,7 +25,6 @@
         "rejectUnauthorized": false 
       }
     }
-    
   },
   "development3": {
     "username": "root",
@@ -36,7 +35,7 @@
   },
 
   
-  "production": {
+  "production2": {
     "username": "root",
     "password": null,
     "database": "database_production",
