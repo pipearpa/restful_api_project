@@ -15,7 +15,7 @@
   },
   "production": {
     "username": "jusapi",
-    "password": "sC2wCp4kxMDXRS8gBpqD7d90W21kzXdmac",
+    "password": "C2wCp4kxMDXRS8gBpqD7d90W21kzXdma",
     "database": "db_api_rest_yxp2",
     "host": "oregon-postgres.render.com",
     "dialect": "postgres",
